@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.cdnfonts.com/css/games');
+
+.race,
+.timetrials-container {
+    display: block;
+}
+
+.timetrials-container {
+    position: absolute;
+    /* background: white; */
+    display: block;
+    width: 30%;
+    height: 10%;
+    margin: 0 auto;
+    top: 12vh;
+    font: 20px Games, sans-serif;
+    /* display: block; */
+}
+
+.lap {
+    position: relative;
+    display: inline-block;
+    bottom: 10px;
+    /* left: 2vh; */
+    width: 40%;
+    color: #dfd478;
+}
+
+.race-checkp {
+    position: relative;
+    display: inline-block;
+    bottom: 10px;
+    left: -2vh;
+    width: 25%;
+    color: #dfd478;
+}
+
+.delta {
+    position: relative;
+    display: inline-block;
+    bottom: 10px;
+    width: 20%;
+    /* left: 7vh; */
+    color: #dfd478;
+}
+
+.row {
+    display: inline-block;
+    position: relative;
+    /* left: 2vh; */
+    height: 30%;
+    width: 60%;
+    background: rgba(23, 23, 23, 80%);
+    line-height: 35px;
+    border-radius: 0.30rem;
+    box-shadow: 0.05rem 0.05rem 0.4rem 0.05rem #dfd478;
+}
+
+.drift-pos {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    height: 100%;
+    width: 12%;
+    color: #dfd478;
+    background: rgb(23, 23, 23, 80%);
+    border-radius: 0.10rem;
+    box-shadow: 0.05rem 0.05rem 0.2rem 0.02rem #dfd478;
+
+}
+
+.drift-name {
+    position: relative;
+    width: 45%;
+    left: 1vh;
+    display: inline-block;
+    color: #dfd478;
+    text-align: left;
+}
+
+.score {
+    position: relative;
+    display: inline-block;
+    left: 10px;
+    width: 35%;
+    color: #dfd478;
+}
+
+
+.delta-time {
+    top: -1px;
+    display: inline-block;
+    position: relative;
+    left: 5px;
+    /* height: 100%; */
+    width: 20%;
+    background: rgba(23, 23, 23, 80%);
+    color: #dfd478;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 0.3rem;
+    box-shadow: 0.05rem 0.05rem 0.4rem 0.05rem #4aa301;
+}
