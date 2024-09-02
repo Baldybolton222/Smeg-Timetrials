@@ -1,8 +1,6 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 local vehiclePedIsIn
 local playerRaceStatus = {}
-local racerName = string.format(string.sub(QBCore.Functions.GetPlayerData().charinfo.firstname, 1, 1) ..
-    '. ' .. QBCore.Functions.GetPlayerData().charinfo.lastname)
 local currentRaceState = {
     checkpoint = 1,
     index = 0,
@@ -10,6 +8,9 @@ local currentRaceState = {
     scores = nil,
     blip = nil,
 }
+
+local racerName = "Placeholder"
+
 
 -- Array of colors to display scores, top to bottom and scores out of range will be white
 local raceScoreColors = {
@@ -20,11 +21,15 @@ local raceScoreColors = {
 
 RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
     Utils.createBlips()
+    racerName = string.format(string.sub(QBCore.Functions.GetPlayerData().charinfo.firstname, 1, 1) ..
+        '. ' .. QBCore.Functions.GetPlayerData().charinfo.lastname)
 end)
 
 AddEventHandler('onResourceStart', function(resourceName)
     if GetCurrentResourceName() == resourceName then
         Utils.createBlips()
+        racerName = string.format(string.sub(QBCore.Functions.GetPlayerData().charinfo.firstname, 1, 1) ..
+        '. ' .. QBCore.Functions.GetPlayerData().charinfo.lastname)
     end
 end)
 
@@ -301,7 +306,7 @@ AddEventHandler("smeg-timetrials:client:ActiveRace", function(drawScores)
                     PlaySoundFrontend(-1, "ScreenFlash", "WastedSounds")
                     Utils.ClearCheckpointFlares()
                     local rewardAmount = math.floor((totalRaceDistance / (finishTime / 1000)) *
-                    (totalRaceDistance * 0.02))
+                        (totalRaceDistance * 0.02))
                     TriggerServerEvent('smeg-timetrials:server:raceReward', rewardAmount)
                     SetTimeout(5000, function()
                         SendNUIMessage({
